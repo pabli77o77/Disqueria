@@ -1,0 +1,57 @@
+﻿@model Disqueria.ViewModel.DiscoVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>DiscoVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DiscoID" />
+            <input type="hidden" asp-for="Titulo" />
+            <div class="form-group">
+                <label asp-for="Artista" class="control-label"></label>
+                <input asp-for="Artista" class="form-control" />
+                <span asp-validation-for="Artista" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtistaID" class="control-label"></label>
+                <input asp-for="ArtistaID" class="form-control" />
+                <span asp-validation-for="ArtistaID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GeneroID" class="control-label"></label>
+                <input asp-for="GeneroID" class="form-control" />
+                <span asp-validation-for="GeneroID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Discografica" class="control-label"></label>
+                <input asp-for="Discografica" class="form-control" />
+                <span asp-validation-for="Discografica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiscograficaID" class="control-label"></label>
+                <input asp-for="DiscograficaID" class="form-control" />
+                <span asp-validation-for="DiscograficaID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
